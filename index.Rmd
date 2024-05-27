@@ -5,59 +5,61 @@ output: html_document
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+The jail and prison population in the United States is a big issue that shows many of our societal and systemic problems. The U.S. has one of the highest incarceration rates in the world, along with a significant racial and ethnic disparities as well. This is why I decided to look at the overall changes in jail populations as well as rates for specific minorities such as Black and Latinx. Understanding trends and rates of jail and prison populations across different states and counties is very important for working on these issues. Data on jail and prison populations can bring to light patterns and trends that can be a big help to inform policy decisions, areas that need reform, and creating a more equitable justice system.
+
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+For this assignment I have chosen to analyze the total jail population as well as the Black and White jail population rates. 
 
-These will likely be calculated using your DPLYR skills, answering questions such as: 
+I found the current averages across all counties for White and Black jail populations, which showed how the Black population was over 5 times people higher than the average White population which shows how the disparity of Black being incarcerated much more shows up across the country.
 
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
+The county that had the most turned out to be King county with over 25,000 people in the jail system, and even if this data point is from 2018, it shows that something has to change if other larger counties are doing better. 
 
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+Next there ended up being 5 counties total that had 0 total jail population but that number shouldn't be that low, there should be a couple more with 0 if you consider how many counties there are. 
+
+Finally in the last year the average change was positive, meaning since 2017, jail populations across the country have gone up by 7.
+
+``````{r, echo = FALSE, code = readLines("summary.R")}
+```
 
 ### The Dataset
 
 Who collected the data?  
+Vera Institute
+
 How was the data collected or generated?  
+Data was collected using the bureau of Justice Statistics (BJS) as well as the Census of Jails (COJ)
+
 Why was the data collected?  
+To allow research on the county level instead of the state level for more robust and grounded studies
+
 How many observations (rows) are in your data?  
+There are 91,031 observations/rows
+
 How many features (columns) are in the data?  
+There are 23 features/columns
+
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+There are some important ethical questions/questions of power that I need to consider such as how the use of this data affects the represented incarcerated community and how people in higher power will view the community as a result.
+
 What are possible limitations or problems with this data?   (at least 200 words)
 
+Looking through the data set, there seems to be a lot of N/A data points. This means that either a lot of data was not collected some years or was not accessible. This poses a problem when analyzing the data set, with how many empty data points there are for some variables for certain years and places, some analyses can very possibly become inaccurate or wrong. This also means to be more accurate, variables will be much more limited in which ones are the best to use. Some 
 
 ### Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+From this first trends over time chart, it shows how Black and Latinx jail populations have been much much higher than White jail populations. This graph does show signs of Black incarceration rates dropping a lot since late 1990s, but, looking at the more recent years, the decrease is slowing down. Latinx population is hovering between the White and Black population lines. But if you compare this graph to the actual populations in the US, the populations rates should be almost flipped.
 
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, code = readLines("chart_trends_over_time.R")}
 ```
 
 ### Variable Comparison Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+From this chart that compares each counties White jail population with Black and Latinx jail populations, we can see how most counties are bunched up to the left which means that there are much more Black and Latinx people in the jail system in those counties than White. There are only a handful of outliers as well which shows the extent of how common the disparities are.
 
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+``````{r, echo = FALSE, code = readLines("chart_variable_comparison.R")}
+```
 
 ### Map
 
@@ -68,4 +70,6 @@ The last chart that you will create and include will show how a variable is dist
 - Your map needs a title
 - Your color scale needs a legend with a clear label
 - Use a map based coordinate system to set the aspect ratio of your map
+
+Change in year for each county for map
 
