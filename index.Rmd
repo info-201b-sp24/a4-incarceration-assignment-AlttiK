@@ -9,7 +9,6 @@ Altti K
 
 The jail and prison population in the United States is a big issue that shows many of our societal and systemic problems. The U.S. has one of the highest incarceration rates in the world, along with a significant racial and ethnic disparities as well. This is why I decided to look at the overall changes in jail populations as well as rates for specific minorities such as Black and Latinx. Understanding trends and rates of jail and prison populations across different states and counties is very important for working on these issues. Data on jail and prison populations can bring to light patterns and trends that can be a big help to inform policy decisions, areas that need reform, and creating a more equitable justice system.
 
-
 ### Summary Information
 
 For this assignment I have chosen to analyze the total jail population as well as the Black and White jail population rates. 
