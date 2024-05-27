@@ -3,6 +3,8 @@ title: "A3: Incarceration"
 output: html_document
 ---
 
+Altti K
+
 ### Introduction
 
 The jail and prison population in the United States is a big issue that shows many of our societal and systemic problems. The U.S. has one of the highest incarceration rates in the world, along with a significant racial and ethnic disparities as well. This is why I decided to look at the overall changes in jail populations as well as rates for specific minorities such as Black and Latinx. Understanding trends and rates of jail and prison populations across different states and counties is very important for working on these issues. Data on jail and prison populations can bring to light patterns and trends that can be a big help to inform policy decisions, areas that need reform, and creating a more equitable justice system.
@@ -45,7 +47,7 @@ There are some important ethical questions/questions of power that I need to con
 
 What are possible limitations or problems with this data?   (at least 200 words)
 
-Looking through the data set, there seems to be a lot of N/A data points. This means that either a lot of data was not collected some years or was not accessible. This poses a problem when analyzing the data set, with how many empty data points there are for some variables for certain years and places, some analyses can very possibly become inaccurate or wrong. This also means to be more accurate, variables will be much more limited in which ones are the best to use. Some 
+Looking through the data set, there seems to be a lot of N/A data points. This means that either a lot of data was not collected some years or was not accessible. This poses a problem when analyzing the data set, with how many empty data points there are for some variables for certain years and places, some analyses can very possibly become inaccurate or wrong. This also means to be more accurate, variables will be much more limited in which ones are the best to use. Also in this data set, jail variables are much more filled in compared to prison variables which means using prison number for analysis will be much more inaccurate compared to jail variables. Looking at 2018, every single spot for prison variables is labeled N/A which makes more recent analyses impossible.
 
 ### Trends Over Time Chart
 
@@ -58,18 +60,14 @@ From this first trends over time chart, it shows how Black and Latinx jail popul
 
 From this chart that compares each counties White jail population with Black and Latinx jail populations, we can see how most counties are bunched up to the left which means that there are much more Black and Latinx people in the jail system in those counties than White. There are only a handful of outliers as well which shows the extent of how common the disparities are.
 
+Note: counties with N/A values were not graphed
+
 ``````{r, echo = FALSE, code = readLines("chart_variable_comparison.R")}
 ```
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+In the last decade while some states have kept jail populations the same or even lowered them, there are still many states that have very high population rate changes. For example Kentucky has the highest with over 30,000 more people in jail across 10 years than before. On the other hand a lot of states also are in the negatives such as Washington or Florida which have a hint of green instead of red. It shows how varied the country is in dealing with incarceration effectively.
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
-Change in year for each county for map
-
+``````{r, echo = FALSE, code = readLines("map.R")}
+```
