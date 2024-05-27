@@ -28,3 +28,5 @@ ggplot(change_in_jail_pop.geo, aes(x = long, y = lat, group = group, fill = stat
   scale_fill_gradient2(name = "Change in Jail Pop Rate", limit = c(-5000, 35000), low = "green", mid = "white", high = "red", midpoint = 1000) +
   labs(title = "Change in Jail Population Rates by State from 2008-18")
 
+#Quick note: minimal theme makes map almost unreadable so I didn't use it for the sake of readability.
+
